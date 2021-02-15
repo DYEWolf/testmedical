@@ -1,0 +1,10 @@
+<button class="load-button" *ngIf="!loading && !workspace" (click)="onClick()">
+  Load medical image
+</button>
+
+<set-progress-bar *ngIf="loading" value="1"></set-progress-bar>
+
+<set-view-volumetric
+  class="volumetric-view"
+  [workspace]="workspace"
+></set-view-volumetric>
